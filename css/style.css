@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rouge+Script&display=swap");
+
+:root {
+  --color-primary: hsl(84, 8%, 12%);
+  --secondry: hsl(91, 63%, 92%);
+  --accent: hsl(86, 86%, 70%);
+}
+body {
+  background-color: var(--color-primary);
+}
