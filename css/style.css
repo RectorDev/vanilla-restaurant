@@ -1,10 +1,126 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Rouge+Script&display=swap");
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 :root {
   --color-primary: hsl(84, 8%, 12%);
   --secondry: hsl(91, 63%, 92%);
   --accent: hsl(86, 86%, 70%);
+  --roboto: "Roboto", sans-serif;
+  --fancy: "Rouge script", sans-serif;
+}
+
+.display {
+  display: flex;
 }
 body {
   background-color: var(--color-primary);
+  background-image: url("../images/dish.jpg");
+  background-size: cover;
+
+  background-position: center;
+  height: 100vh;
+}
+
+#hero {
+  padding: 1rem 2rem;
+  max-width: 1440px;
+  margin: 0 auto;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+#vanilla-logo {
+  width: 130px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  border-radius: 999999px;
+}
+
+.vanilla {
+  margin-top: 3rem;
+  align-items: center;
+  gap: 3rem;
+  display: flex;
+}
+.vanilla-title {
+  color: var(--secondry);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--roboto);
+
+  flex-direction: column;
+}
+.vanilla-title h1 {
+  letter-spacing: 5px;
+  font-size: 4.5rem;
+  font-weight: 300;
+}
+.vanilla-title h2 {
+  letter-spacing: 7px;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.hero-text {
+  margin-top: 3rem;
+  padding: 1rem;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hero-text > :nth-child(1) {
+  font-size: 9rem;
+  font-weight: 500;
+  color: var(--accent);
+  font-family: var(--fancy);
+}
+
+.hero-text > :nth-child(2) {
+  text-transform: capitalize;
+  color: var(--secondry);
+  font-family: var(--roboto);
+  font-size: 4rem;
+  font-weight: 300;
+}
+.hero-text button {
+  margin-top: 4rem;
+  font-weight: 400;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  background-color: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  padding: 1rem 2.5rem;
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.hero-text button:hover {
+  background-color: var(--accent);
+  color: var(--color-primary);
+}
+
+@media (max-width: 500px) {
+  .vanilla {
+    gap: 1rem;
+    margin-top: 0;
+    flex-direction: column;
+  }
+
+  .hero-text > :nth-child(1) {
+    font-size: 7rem;
+  }
+  .hero-text > :nth-child(2){
+    font-size: 3rem;
+  }
 }
